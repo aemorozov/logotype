@@ -1,0 +1,166 @@
+@import "01_colors.scss";
+
+.header {
+    width:100%;
+    text-align: center;
+}
+
+.header-logo {
+    position: relative;
+    width: 95%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 29px;
+    padding-bottom: 19px;
+    background: #fff;
+}
+
+.header-logo-img {
+    width: 181px;
+    height: 27px;
+}
+
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.input {
+    height: 40px;
+    width: 0rem;
+    padding: 5px 50px 0 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: -62px;
+    right: 42px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.button {
+    padding: 0 0 0 0;
+    border: none;
+    height: 45px;
+    width: 50px;
+    position: absolute;
+    top: -62px;
+    right: 42px;
+    cursor: pointer;
+    background: url(../img/W.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.input:focus {
+    width: 10rem;
+    z-index: 1;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.nav {
+    width: 100%;
+    height: 57px;
+    border-top: 1px solid $nice-gray;
+    border-bottom: 1px solid $nice-gray;  
+    background: #fff;  
+}
+
+.nav-flex {
+    width: 553px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.nav-level-1, .nav-level-1-a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 57px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.with-level-2 {
+    float: right;
+    content: url("../img/Path.svg");
+    margin-left: 4px;
+    margin-top: 26px;
+}
+
+.drop-down-1, .drop-down-2, .drop-down-3, .drop-down-4, .drop-down-5 {
+    position: absolute;
+    top: -50px;
+    border: 1px solid rgba(233, 233, 233, 1);
+    list-style-type: none;
+    padding: 12px 18px;
+    text-align: left;
+    background-color: #fff;
+    transition: .4s cubic-bezier(0,.8,0,1);
+    z-index: -100;
+}
+
+.nav-item-1:hover .drop-down-1 {
+   top: 140px;
+}
+
+.nav-item-2:hover .drop-down-2 {
+    top: 140px;
+}
+
+.nav-item-3:hover .drop-down-3 {
+    top: 140px;
+}
+
+.nav-item-4:hover .drop-down-4 {
+    top: 140px;
+}
+
+.nav-item-5:hover .drop-down-5 {
+    top: 140px;
+}
+
+.drop-down-li {
+    line-height: 28px;
+    width: 138px;
+    border-bottom: 1px solid rgba(233, 233, 233, 1);
+}
+
+.drop-down-li::after {
+    content: url(../img/Little-path-right.svg);
+    float: right;
+}
+
+.drop-down-li:last-child {
+    border: none;
+}
+
+.drop-down-a {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    transition: .4s cubic-bezier(0,.8,0,1);
+}
+
+.drop-down-a:hover {
+    color: rgba(150, 150, 150, 1);
+    margin-left: 10px;
+}
+
+.drop-down-a:focus-visible {
+    color: rgba(150, 150, 150, 1);
+    margin-left: 10px;
+}
