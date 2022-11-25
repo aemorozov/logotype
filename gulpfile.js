@@ -59,8 +59,8 @@ const processStyle = () => {
   return gulp
     .src(styleFiles)
     .pipe(gulpSassWorker().on("error", gulpSassWorker.logError))
-    .pipe(autoprefixer({ grid: true }))
     .pipe(gcssmq())
+    .pipe(autoprefixer({ grid: true }))
     .pipe(concatCss("style.css"))
     .pipe(cssMinify())
     .pipe(gulp.dest(`${distDir}${stylesDir}`))

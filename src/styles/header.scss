@@ -1,4 +1,4 @@
-@import "01_colors.scss";
+@import "01_vars.scss";
 
 .header {
     width:100%;
@@ -21,57 +21,83 @@
 }
 
 .search {
-    position: relative;
-    width: 100%;
+    position: sticky;
+    width: 35%;
+    height: 50px;
     max-width: 1280px;
     margin: 0 auto;
+    // top: 20px;
+    margin-top: -3.125rem;
+    float: right;
 }
 
 .input {
-    height: 40px;
+    height: 50px;
     width: 0rem;
-    padding: 5px 50px 0 0;
+    padding: 0px 50px 0 0;
     border: none;
     outline: none;
     background: transparent;
-    transition: .4s cubic-bezier(0, 0.8, 0, 1);
-    position: absolute;
-    top: -62px;
-    right: 42px;
-    z-index: 2;
+    transition: $basic-transition;
+    // position: absolute;
+    // top: -62px;
+    // right: 42px;
+    // z-index: 2;
     cursor: pointer;
+    float: right;
+    margin-right: -3.125rem;
+    margin-top: -0.875rem;
 }
 
 .button {
     padding: 0 0 0 0;
     border: none;
-    height: 45px;
+    height: 50px;
     width: 50px;
-    position: absolute;
-    top: -62px;
-    right: 42px;
+    // position: absolute;
+    // top: -62px;
+    // right: 42px;
     cursor: pointer;
     background: url(../img/W.svg);
     background-position: center center;
     background-repeat: no-repeat;
+    float: right;
+    margin-top: -0.875rem;
+    margin-right: 2.6875rem;
 }
 
 .input:focus {
     width: 10rem;
     z-index: 1;
-    border-bottom: 1px solid #E9E9E9;
+    border-bottom: $borders-color;
+}
+
+.burger {
+    width: 27px;
+    height: 19px;
+    display: none;
+    float: left;
+    margin-left: 1.1875rem;
+    margin-top: 0.1875rem;
+    cursor: pointer;
+}
+
+.header-mobile-menu {
+    display: none;
 }
 
 .nav {
+    position: sticky;
+    top: 0;
     width: 100%;
-    height: 57px;
-    border-top: 1px solid $nice-gray;
-    border-bottom: 1px solid $nice-gray;  
+    height: 56px;
+    border-top: $borders-color;
+    border-bottom: $borders-color;  
     background: #fff;  
 }
 
 .nav-flex {
-    width: 553px;
+    width: 583px;
     display: flex;
     flex-direction: row;
     margin: 0 auto;
@@ -84,56 +110,72 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 58px;
     text-decoration: none;
-    color: #000000;
+    color: #000;
     cursor: pointer;
 }
 
+.nav-level-1-p {
+    padding: 0 15px;
+}
+
 .with-level-2 {
-    float: right;
+    // float: right;
     content: url("../img/Path.svg");
-    margin-left: 4px;
-    margin-top: 26px;
+    vertical-align: middle;
+    // margin-left: 4px;
+    // margin-top: 26px;
 }
 
 .drop-down-1, .drop-down-2, .drop-down-3, .drop-down-4, .drop-down-5 {
     position: absolute;
-    top: -50px;
-    border: 1px solid rgba(233, 233, 233, 1);
+    // top: 140px;
+    top: 56px;
+    border: $borders-color;
     list-style-type: none;
     padding: 12px 18px;
     text-align: left;
     background-color: #fff;
-    transition: .4s cubic-bezier(0,.8,0,1);
-    z-index: -100;
+    // transition: $basic-transition;
+    display: none;
+    z-index: 1;
+}
+
+.nav-item-6 {
+    color: #000;
 }
 
 .nav-item-1:hover .drop-down-1 {
-   top: 140px;
+    // top: 140px;
+    display: block;
 }
 
 .nav-item-2:hover .drop-down-2 {
-    top: 140px;
+    // top: 140px;
+    display: block;
 }
 
 .nav-item-3:hover .drop-down-3 {
-    top: 140px;
+    // top: 140px;
+    display: block;
 }
 
 .nav-item-4:hover .drop-down-4 {
-    top: 140px;
+    // top: 140px;
+    display: block;
 }
 
 .nav-item-5:hover .drop-down-5 {
-    top: 140px;
+    // top: 140px;
+    display: block;
 }
 
 .drop-down-li {
     line-height: 28px;
     width: 138px;
-    border-bottom: 1px solid rgba(233, 233, 233, 1);
+    border-bottom: $borders-color;
 }
 
 .drop-down-li::after {
@@ -149,18 +191,136 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 0.8125rem;
     text-decoration: none;
-    color: #000000;
-    transition: .4s cubic-bezier(0,.8,0,1);
+    color: #000;
+    transition: $basic-transition;
 }
 
-.drop-down-a:hover {
+.drop-down-li:hover .drop-down-a {
     color: rgba(150, 150, 150, 1);
     padding-left: 10px;
 }
 
-.drop-down-a:focus-visible {
-    color: rgba(150, 150, 150, 1);
-    margin-left: 10px;
+.background {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(150, 150, 150, 0.2);
+    z-index: 200;
 }
+
+@media screen and (max-width: 649px) {
+
+    .input:focus{
+        width: 70%;
+        background: #fff;
+        padding-right: 0;
+        margin-right: 0px;
+        // right: 100px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    
+    .header-logo-img {
+        width: 163px;
+        margin-top: 0.1875rem;
+        height: 24px;
+    }
+
+    .button {
+        margin-top: -0.8125rem;
+        margin-right: 0.1875rem;
+    }
+
+    .burger {
+        display: inline-block;
+    }
+
+    .header-mobile-menu {
+        text-align: left;
+        display: block;
+        height: 50px;
+        padding-left: 20px;
+        padding-top: 32px;
+        padding-right: 19px;
+        border-bottom: $borders-color;
+    }
+
+    .header-mobile-menu-logo-img {
+        width: 161.28px;
+        height: 24.05px;
+    }
+
+    .header-mobile-cross-img {
+        width: 21px;
+        height: 21px;
+        float: right;
+        margin-top: 0.125rem;
+        cursor: pointer;
+    }
+
+    .search {
+        width: 100%;
+        float: none;
+    }
+
+    .nav {
+        border: 0;
+        position: fixed;
+        width: 320px;
+        height: 100%;
+        top: 0;
+        border-right: $borders-color;
+        // left: -350px;
+        transform: translateX(-100%);
+        transition: .4s cubic-bezier(0, 0.8, 0, 1);
+        z-index: 201;
+    }
+
+    .nav-flex {
+        width: 87.5%;
+        flex-direction: column;
+        margin-top: 1.0625rem;
+    }
+
+    .nav-level-1 {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 50px;
+        border-bottom: $borders-color;
+        margin-top: -0.0625rem;
+    }
+
+    .nav-level-1:last-child {
+        border-bottom: 0;
+    }
+
+    .nav-level-1-p {
+        padding: 0;
+    }
+
+    .with-level-2 {
+        height: 100%;
+        margin-left: 0.3125rem;
+        margin-top: 1.375rem;
+        float: right;
+        width: 8px;
+        height: auto;
+    }
+
+    .drop-down-1, .drop-down-2, .drop-down-3, .drop-down-4, .drop-down-5 {
+        position: inherit;
+        border: 0;
+        transition: $basic-transition;
+    }
+
+    .drop-down-li {
+        width: 250px;
+    }
+
+}
+

@@ -6,12 +6,11 @@ body {
     text-rendering: optimizeSpeed;
     font-family: "Roboto", sans-serif;
     line-height: 1.5;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     padding: 0;
     margin: 0;
 }
 
-.content-center {
-    width: 95%;
-    max-width: 1160px;
+a {
+    text-decoration: none;
 }

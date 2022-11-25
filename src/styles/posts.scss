@@ -1,0 +1,147 @@
+@import "01_vars.scss";
+
+.content-center {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.main {
+    width: 93.76%;
+    max-width: 1240px;
+    margin: 1.75rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-flex {
+    flex: 0 0 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.post-img {
+    width: 100%;
+    margin: 0;    
+}
+
+.red-text {
+    color: rgba(235, 0, 40, 1);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    line-height: 13px;
+    margin-top: 0.5rem;
+}
+
+.post-title {
+    color: #000;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 30px;
+    margin-top: 1.0625rem;
+    margin-bottom: 0;
+}
+
+.caption-flex {
+    display: flex;
+    margin-top: 0.1875rem;
+}
+
+.caption {
+    color: #9B9B9B;
+    align-self: center;
+    margin: 0.25rem 0.25rem 0 0.25rem;
+    // content: " • ";
+}
+
+.author {
+    color:#000;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 12px;
+}
+
+.date, .views {
+    color: #9B9B9B;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 12px;
+    // margin-left: 6px;
+}
+
+.post-content {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 20px;
+    color: #929292;
+    margin-top: 0.3125rem;
+    margin-bottom: 0.4375rem;
+}
+
+@media screen and (max-width: 1199px) {
+    .post-flex {
+        flex: 0 0 50%;
+    }  
+}
+
+@media screen and (max-width: 799px) {
+    .main {
+        margin-top: 0;
+        width: 97%;
+    }
+    
+    .post-flex {
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 11px;
+        padding-top: 1px;
+        margin-bottom: 13px;
+        padding-bottom: 0;
+    }
+
+    .red-text {
+        margin-top: 0.5625rem;
+    }
+
+    .post-title {
+        margin-top: 1rem;
+    }
+
+    .caption-flex {
+        margin-top: 0.25rem;
+    }
+
+    .caption {
+        margin-top: 0.0625rem;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .main {
+        width: 93.76%;
+    }
+    
+    .post-img {
+        width: 100%;
+        height: 230px;
+        margin: 0;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .post-flex {
+        flex: 0 0 100%;
+    }
+}

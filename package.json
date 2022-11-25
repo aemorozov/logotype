@@ -42,5 +42,6 @@
     "*.{js,css,json,html,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "dependencies": {}
 }
